@@ -35,11 +35,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+#         cache: 'npm'
       - name: Install JS dependencies
         run: npm ci
+        working-directory: OT3D
       - name: Build JS
         run: npx vite build; find dist
+        working-directory: OT3D
 #
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
