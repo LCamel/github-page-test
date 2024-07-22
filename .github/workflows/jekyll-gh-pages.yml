@@ -40,7 +40,7 @@ jobs:
         run: npm ci
         working-directory: OT3D
       - name: Build JS
-        run: npx vite build; find dist
+        run: npx vite build; find dist; cp dist/assets/*js ./vite-dist.js; rm -fR dist node_modules
         working-directory: OT3D
 #
       - name: Build with Jekyll
