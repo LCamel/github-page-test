@@ -41,7 +41,7 @@ jobs:
         run: npm ci
       - name: Build JS
         working-directory: OT3D
-        run: npx vite build; cp dist/assets/*js ./main.js; rm -fR node_modules dist; find .
+        run: npx vite build; find . -ls; cp dist/assets/*js ./main.js; find . -ls; rm -fR node_modules dist; find . -ls
 #
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
