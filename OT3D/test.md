@@ -1,10 +1,10 @@
 
 ## 111
 
-{% include foo.html %}
+{% include_relative foo.html %}
 
 ## 222
 
-{% include bar.html %}
+{% include_relative bar.html %}
 
 ## 333
